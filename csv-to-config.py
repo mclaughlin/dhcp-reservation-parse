@@ -5,6 +5,7 @@ This script parses a csv file and from it creates
 a dhcp reservation printer config file.
 """
 
+import sys
 import csv
 
 def parse_csv(file):
@@ -22,5 +23,6 @@ def parse_csv(file):
                     print(f'\t{word}')
             print('}\n')
 
-parse_csv('src/dhcp.csv')
+if __name__ == '__main__':
+    parse_csv(sys.argv[1:2][0])
 

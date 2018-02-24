@@ -4,6 +4,8 @@
 This script creates a csv file from a dhcp printer reservation conf
 """
 
+import sys
+
 def parse_config(file):
     with open(file) as fin:
         for line in fin.readlines():
@@ -26,5 +28,6 @@ def parse_config(file):
                 row += f'{line},'
                 last_was_comment = False
 
-parse_config('src/printers.conf')
+if __name__ == '__main__':
+        parse_config(sys.argv[1:2][0])
 
