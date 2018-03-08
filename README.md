@@ -2,13 +2,12 @@
 ---
 These scripts parse DHCP reservcation configs, both from [config-to-csv](https://github.com/mclaughlin/dhcp-reservation-parse/blob/master/csv-to-config.py>) and [csv-to-config](https://github.com/mclaughlin/dhcp-reservation-parse/blob/master/config-to-csv.py).
 
-
 csv-to-conifg.py usage:
 ------------
 
 Example csv input (from file):
 
-    host my-printer,#comments #location: my desk,10.1.2.3,fixed-address 10.1.2.3,hardware ethernet 00:ef:29:21:ba:6b,option routers 10.1.1.1,option subnet-mask 255.255.0.0,option domain-name "domain-name.com"
+    host my-printer,#comments #location: my desk,fixed-address 10.1.2.3,hardware ethernet 00:ef:29:21:ba:6b,option routers 10.1.1.1,option subnet-mask 255.255.0.0,option domain-name "domain-name.com"
 
 Example call (this will output to stdout):
 
@@ -25,12 +24,11 @@ Specify an output file:
 ...or redirect stdout to a file:
 
     $ ./csv-to-config.py src/dhcp.csv > output/printers.conf
-    
+
 Example output:
 
     host my-printer {
         #comment #location: my desk
-        10.1.2.3
         fixed-address 10.1.2.3
         hardware ethernet 00:ef:29:21:ba:6b
         option routers 10.1.1.1
@@ -45,7 +43,6 @@ Example dhcp config input (from file):
 
     host my-printer {
         #comment #location: my desk
-        10.1.2.3
         fixed-address 10.1.2.3
         hardware ethernet 00:ef:29:21:ba:6b
         option routers 10.1.1.1
@@ -71,4 +68,4 @@ Specify an output file:
 
 Example output:
 
-    host my-printer,#comments #location: my desk,10.1.2.3,fixed-address 10.1.2.3,hardware ethernet 00:ef:29:21:ba:6b,option routers 10.1.1.1,option subnet-mask 255.255.0.0,option domain-name "domain-name.com"
+    host my-printer,#comments #location: my desk,fixed-address 10.1.2.3,hardware ethernet 00:ef:29:21:ba:6b,option routers 10.1.1.1,option subnet-mask 255.255.0.0,option domain-name "domain-name.com"
