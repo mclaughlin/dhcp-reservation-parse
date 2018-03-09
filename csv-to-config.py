@@ -27,7 +27,7 @@ def parse_csv(input_file, output_file=None):
                     for comment in comments:
                         process_output(f'\t#{comment}', output_file)
                 else:
-                    process_output(f'\t{word}', output_file)
+                    process_output(f'\t{word};', output_file)
             process_output('}\n', output_file)
 
 def process_output(output, output_file=None):

@@ -29,11 +29,11 @@ Example output:
 
     host my-printer {
         #comment #location: my desk
-        fixed-address 10.1.2.3
-        hardware ethernet 00:ef:29:21:ba:6b
-        option routers 10.1.1.1
-        option subnet-mask 255.255.0.0
-        option domain-name "domain-name.com"
+        fixed-address 10.1.2.3;
+        hardware ethernet 00:ef:29:21:ba:6b;
+        option routers 10.1.1.1;
+        option subnet-mask 255.255.0.0;
+        option domain-name "domain-name.com";
     }
 
 config-to-csv.py usage:
@@ -43,11 +43,11 @@ Example dhcp config input (from file):
 
     host my-printer {
         #comment #location: my desk
-        fixed-address 10.1.2.3
-        hardware ethernet 00:ef:29:21:ba:6b
-        option routers 10.1.1.1
-        option subnet-mask 255.255.0.0
-        option domain-name "domain-name.com"
+        fixed-address 10.1.2.3;
+        hardware ethernet 00:ef:29:21:ba:6b;
+        option routers 10.1.1.1;
+        option subnet-mask 255.255.0.0;
+        option domain-name "domain-name.com";
     }
 
 Example call:
