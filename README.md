@@ -1,4 +1,4 @@
-# dhcp-reservation-parse
+# DHCP Reservation Parse
 ---
 These scripts parse DHCP reservcation configs, both from [config-to-csv](https://github.com/mclaughlin/dhcp-reservation-parse/blob/master/csv-to-config.py) and [csv-to-config](https://github.com/mclaughlin/dhcp-reservation-parse/blob/master/config-to-csv.py).
 
