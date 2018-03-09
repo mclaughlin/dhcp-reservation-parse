@@ -20,7 +20,7 @@ Example call (this will output to stdout)::
 
     ./config-to-csv.py src/printers.conf
 
-...or to run using pipenv:
+...or to run using pipenv::
 
     pipenv run ./config-to-csv.py src/printers.conf
 
