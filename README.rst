@@ -1,45 +1,11 @@
-# DHCP Reservation Parse
----
-These scripts parse DHCP reservcation configs, both from [config-to-csv](https://github.com/mclaughlin/dhcp-reservation-parse/blob/master/csv-to-config.py) and [csv-to-config](https://github.com/mclaughlin/dhcp-reservation-parse/blob/master/config-to-csv.py).
-
-csv-to-conifg.py usage:
-------------
-
-Example csv input (from file):
-
-    host my-printer,#comments #location: my desk,fixed-address 10.1.2.3,hardware ethernet 00:ef:29:21:ba:6b,option routers 10.1.1.1,option subnet-mask 255.255.0.0,option domain-name "domain-name.com"
-
-Example call (this will output to stdout):
-
-    ./csv-to-config.py src/dhcp.csv
-
-...or to run using pipenv:
-
-    $ pipenv run ./csv-to-config.py src/dhcp.csv
-
-Specify an output file:
-
-    $ ./csv-to-config.py src/dhcp.csv output/printers.conf
-
-...or redirect stdout to a file:
-
-    $ ./csv-to-config.py src/dhcp.csv > output/printers.conf
-
-Example output:
-
-    host my-printer {
-        #comment #location: my desk
-        fixed-address 10.1.2.3;
-        hardware ethernet 00:ef:29:21:ba:6b;
-        option routers 10.1.1.1;
-        option subnet-mask 255.255.0.0;
-        option domain-name "domain-name.com";
-    }
+DHCP Reservation Parse
+==============================================
+These scripts parse DHCP reservcation configs, both from `config-to-csv <https://github.com/mclaughlin/dhcp-reservation-parse/blob/master/csv-to-config.py>`_ and `csv-to-config <https://github.com/mclaughlin/dhcp-reservation-parse/blob/master/config-to-csv.py>`_.
 
 config-to-csv.py usage:
-------------
+---------------
 
-Example dhcp config input (from file):
+Example dhcp config input (from file)::
 
     host my-printer {
         #comment #location: my desk
@@ -50,7 +16,7 @@ Example dhcp config input (from file):
         option domain-name "domain-name.com";
     }
 
-Example call:
+Example call (this will output to stdout)::
 
     ./config-to-csv.py src/printers.conf
 
@@ -58,14 +24,48 @@ Example call:
 
     pipenv run ./config-to-csv.py src/printers.conf
 
-Specify an output file:
+Specify an output file::
 
     $ ./config-to-csv.py src/printers.conf output/dhcp.csv
 
-...or redirect stdout to a file:
+...or redirect stdout to a file::
 
     $ ./config-to-csv.py src/printers.conf > output/dhcp.csv
 
-Example output:
+Example output::
 
     host my-printer,#comments #location: my desk,fixed-address 10.1.2.3,hardware ethernet 00:ef:29:21:ba:6b,option routers 10.1.1.1,option subnet-mask 255.255.0.0,option domain-name "domain-name.com"
+
+csv-to-conifg.py usage:
+---------------
+
+Example csv input (from file)::
+
+    host my-printer,#comments #location: my desk,fixed-address 10.1.2.3,hardware ethernet 00:ef:29:21:ba:6b,option routers 10.1.1.1,option subnet-mask 255.255.0.0,option domain-name "domain-name.com"
+
+Example call (this will output to stdout)::
+
+    $ ./csv-to-config.py src/dhcp.csv
+
+...or to run using pipenv::
+
+    $ pipenv run ./csv-to-config.py src/dhcp.csv
+
+Specify an output file::
+
+    $ ./csv-to-config.py src/dhcp.csv output/printers.conf
+
+...or redirect stdout to a file::
+
+    $ ./csv-to-config.py src/dhcp.csv > output/printers.conf
+
+Example output::
+
+    host my-printer {
+        #comment #location: my desk
+        fixed-address 10.1.2.3;
+        hardware ethernet 00:ef:29:21:ba:6b;
+        option routers 10.1.1.1;
+        option subnet-mask 255.255.0.0;
+        option domain-name "domain-name.com";
+    }
