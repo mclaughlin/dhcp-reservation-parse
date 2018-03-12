@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
 """
-This script creates a csv file from a dhcp printer reservation conf
+This script receives input in the form of a dhcp reservation
+conf file, and outputs this data in the form of a csv file
 """
 
 import sys
