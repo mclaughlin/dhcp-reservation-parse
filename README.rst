@@ -62,7 +62,8 @@ Specify an output file::
 Example output::
 
     host my-printer {
-        #comment #location: my desk
+        #comment
+        #location: my desk
         fixed-address 10.1.2.3;
         hardware ethernet 00:ef:29:21:ba:6b;
         option routers 10.1.1.1;
